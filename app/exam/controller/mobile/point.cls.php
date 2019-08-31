@@ -187,7 +187,7 @@ class point
     public function paper()
     {
         $pointid = \route::get('pointid');
-        if($pointid != current(current($this->basic['basicpoints'])))
+        /*if($pointid != current(current($this->basic['basicpoints'])))
         {
             if(!$this->status['status'])
             {
@@ -199,7 +199,7 @@ class point
                 );
                 \route::urlJump($message);
             }
-        }
+        }*/
         $point = points::getPointById($pointid);
         $record = favor::getRecordSession($this->subject['subjectdb'],\exam\mobile::$_user['sessionusername']);
         $right = $record['recordright'][$pointid];
